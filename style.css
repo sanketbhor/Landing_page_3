@@ -1,0 +1,178 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-boxSS;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main img{
+    height: 600px;
+    z-index: 1;    
+    animation-name: zoom;
+    animation-duration: 7s;
+}
+
+#text-div{
+    position: absolute;
+    top: 10%;
+    z-index: 3;
+    font-size: 20px;
+    width: 40%;
+    text-transform: uppercase;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation-name: topmid;
+    animation-direction: reverse;
+    animation-duration: 5s;
+}
+
+#text1{
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    top: 20%;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#text1 h1{
+    display: inline-block;
+    font-size: 140px;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#text1::-webkit-scrollbar{
+    display: none;
+}
+#text2{
+    position: absolute;
+    width: 100%;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    top: 40%;
+    z-index: 2;
+    font-size: 60px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#text2 h1{
+    display: inline-block;
+    font-size: 140px;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+    animation-name: scroll-opp;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#text2::-webkit-scrollbar{
+    display: none;
+}
+
+
+#text3{
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    top: 60%;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#text3 h1{
+    display: inline-block;
+    font-size: 140px;
+    animation-name: scroll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+#text3::-webkit-scrollbar{
+    display: none;
+}
+
+#img2{
+    z-index: 10;
+    position: absolute;
+    bottom: 5%;
+    right: 15%;
+    height: 250px;
+    animation-name: zoom;
+    animation-duration: 3s;
+    
+}
+#img3{
+    z-index: 1;
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    height: 250px;
+    animation-name: zoom;
+    animation-duration: 5s;
+    
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroll-opp {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+@keyframes zoom {
+    0%{
+        transform:scale(0);
+    }
+    100%{
+        
+        transform:scale(100%);
+    }
+}
+
+@keyframes topmid {
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-500%);
+    }
+}
+
